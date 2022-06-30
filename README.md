@@ -1,136 +1,68 @@
-# Home Assistant Community Add-on: Example
+# Poeschl Home Assistant Supervisor Add-ons
 
-[![GitHub Release][releases-shield]][releases]
-![Project Stage][project-stage-shield]
-[![License][license-shield]](LICENSE.md)
+[![Master build][build-badge]][build-url]
+![GitHub commit activity][commit-badge]
+![Licence][licence-badge]
 
-![Supports armhf Architecture][armhf-shield]
-![Supports armv7 Architecture][armv7-shield]
-![Supports aarch64 Architecture][aarch64-shield]
-![Supports amd64 Architecture][amd64-shield]
-![Supports i386 Architecture][i386-shield]
+[![Donate][donation-badge]][donation-url]
 
-[![Github Actions][github-actions-shield]][github-actions]
-![Project Maintenance][maintenance-shield]
-[![GitHub Activity][commits-shield]][commits]
+My repository with Add-ons for the [Home Assistant (former Hass.io) system](https://www.home-assistant.io/hassio/)
 
-[![Discord][discord-shield]][discord]
-[![Community Forum][forum-shield]][forum]
+## Addons
 
-[![Sponsor Frenck via GitHub Sponsors][github-sponsors-shield]][github-sponsors]
+* ICantBelieveItsNotValetudo - Valetudo Companion for map generation.
+* MaryTTS - A local Text-To-Speech system.
+* PicoTTS - Text to speech voice sinthesizer from SVox, included in Android AOSP.
+* pigpio - The pigpio led control for the Raspberry as addon.
+* MPD - A small media player with minimalistic web ui.
+* valetudo-mapper - Valetudo RE Companion for map generation
+* ympd - A very lightweight Web interface for controlling MPD music servers.
+* Git Exporter - Exports your Home Assistant config to any git repository (secrets check included)
+* Syncthing - A de-centralized file syncronisation program. Focused on privacy.
+* OWASP ZAP - A security testing tool with MITM funtionality.
+* mitmproxy - A simple MITM proxy to trace network requests.
+* rsync - Synces folders from Home Assistant to a other machine via rsync and ssh.
+* rsync-local - Synces folders to local devices like usb-sticks.
+* VNC Viewer - A VNC viewer addon, to integrate VNC displays into HA.
+* Mopidy - A media player with web interface.
+* Asterisk - An open source framework for building communications applications.
+* OWASP Juice Shop - The most trustworthy online shop out there. A totally unsecure plattform.
 
-[![Support Frenck on Patreon][patreon-shield]][patreon]
+More about the Add-ons can be found in their folders.
 
-Example add-on by Community Home Assistant add-ons.
 
-## About
+### 🧪 Experimental
 
-This is an example add-on for Home Assistant. When started, it displays a
-random quote every 5 seconds.
+Those addons might not be stable at all. Use at your own risk!
 
-It shows off several features and structures like:
+* Docker Container Stats - Lightwight monitoring of all the running docker containers.
 
-- Full blown GitHub repository.
-- General Dockerfile structure and setup.
-- The use of the `config.yaml` and `build.yaml` files.
-- General structure on how to use S6 overlay with services.
-- Basic usage of Bashio.
-- Continuous integration and deployment using GitHub Actions.
-- Deployment to the GitHub Container registry.
-- Small use of the Bash function library in our base images.
-- The use of Docker label schema.
 
-[:books: Read the full add-on documentation][docs]
+### 🕸️ Depreciated
 
-## Support
+On thoes addons will be not developed anymore. Feel free to fork them.
 
-Got questions?
+🤷‍♂️
 
-You have several options to get them answered:
+## Installation
 
-- The [Home Assistant Community Add-ons Discord chat server][discord] for add-on
-  support and feature requests.
-- The [Home Assistant Discord chat server][discord-ha] for general Home
-  Assistant discussions and questions.
-- The Home Assistant [Community Forum][forum].
-- Join the [Reddit subreddit][reddit] in [/r/homeassistant][reddit]
+[![Add repository on my Home Assistant][repository-badge]][repository-url]
 
-You could also [open an issue here][issue] GitHub.
+To install those Add-ons add this repository in the Home Assistant Add-on store.
 
-## Contributing
+Use the following URL to add this repository:
 
-This is an active open-source project. We are always open to people who want to
-use the code or contribute to it.
+`https://github.com/Poeschl/Hassio-Addons`
 
-We have set up a separate document containing our
-[contribution guidelines](.github/CONTRIBUTING.md).
+### Licence
 
-Thank you for being involved! :heart_eyes:
+The licence of the repository is inherited by the plugins, if not stated different.
 
-## Authors & contributors
-
-The original setup of this repository is by [Franck Nijhof][frenck].
-
-For a full list of all authors and contributors,
-check [the contributor's page][contributors].
-
-## We have got some Home Assistant add-ons for you
-
-Want some more functionality to your Home Assistant instance?
-
-We have created multiple add-ons for Home Assistant. For a full list, check out
-our [GitHub Repository][repository].
-
-## License
-
-MIT License
-
-Copyright (c) 2017-2022 Franck Nijhof
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-
-[aarch64-shield]: https://img.shields.io/badge/aarch64-yes-green.svg
-[amd64-shield]: https://img.shields.io/badge/amd64-yes-green.svg
-[armhf-shield]: https://img.shields.io/badge/armhf-yes-green.svg
-[armv7-shield]: https://img.shields.io/badge/armv7-yes-green.svg
-[commits-shield]: https://img.shields.io/github/commit-activity/y/hassio-addons/addon-example.svg
-[commits]: https://github.com/hassio-addons/addon-example/commits/main
-[contributors]: https://github.com/hassio-addons/addon-example/graphs/contributors
-[discord-ha]: https://discord.gg/c5DvZ4e
-[discord-shield]: https://img.shields.io/discord/478094546522079232.svg
-[discord]: https://discord.me/hassioaddons
-[docs]: https://github.com/hassio-addons/addon-example/blob/main/example/DOCS.md
-[forum-shield]: https://img.shields.io/badge/community-forum-brightgreen.svg
-[forum]: https://community.home-assistant.io/t/repository-community-hass-io-add-ons/24705?u=frenck
-[frenck]: https://github.com/frenck
-[github-actions-shield]: https://github.com/hassio-addons/addon-example/workflows/CI/badge.svg
-[github-actions]: https://github.com/hassio-addons/addon-example/actions
-[github-sponsors-shield]: https://frenck.dev/wp-content/uploads/2019/12/github_sponsor.png
-[github-sponsors]: https://github.com/sponsors/frenck
-[i386-shield]: https://img.shields.io/badge/i386-yes-green.svg
-[issue]: https://github.com/hassio-addons/addon-example/issues
-[license-shield]: https://img.shields.io/github/license/hassio-addons/addon-example.svg
-[maintenance-shield]: https://img.shields.io/maintenance/yes/2022.svg
-[patreon-shield]: https://frenck.dev/wp-content/uploads/2019/12/patreon.png
-[patreon]: https://www.patreon.com/frenck
-[project-stage-shield]: https://img.shields.io/badge/project%20stage-production%20ready-brightgreen.svg
-[reddit]: https://reddit.com/r/homeassistant
-[releases-shield]: https://img.shields.io/github/release/hassio-addons/addon-example.svg
-[releases]: https://github.com/hassio-addons/addon-example/releases
-[repository]: https://github.com/hassio-addons/repository
+[build-badge]: https://img.shields.io/github/workflow/status/Poeschl/Hassio-Addons/Deploy%20addons?style=for-the-badge
+[build-url]: https://github.com/Poeschl/Hassio-Addons/actions?query=workflow%3A%22Deploy+addons%22
+[commit-badge]: https://img.shields.io/github/commit-activity/m/Poeschl/Hassio-Addons?style=for-the-badge
+[licence-badge]: https://img.shields.io/github/license/Poeschl/Hassio-Addons?style=for-the-badge
+[donation-badge]: https://img.shields.io/badge/Buy%20me%20a%20coffee-%23d32f2f?logo=buy-me-a-coffee&style=for-the-badge&logoColor=white
+[donation-url]: https://www.buymeacoffee.com/Poeschl
+[repository-badge]: https://img.shields.io/badge/Add%20repository%20to%20my-Home%20Assistant-41BDF5?logo=home-assistant&style=for-the-badge
+[repository-url]: https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https%3A%2F%2Fgithub.com%2FPoeschl%2FHassio-Addons
